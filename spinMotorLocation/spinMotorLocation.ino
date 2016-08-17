@@ -119,6 +119,103 @@ void motor(int row, int column){
     char letter = row;
     //Serial.println(letter);
     char number = column;
+
+    switch (letter) {
+      case 'A':
+      {
+        Serial.println("In the A case");
+        //Serial.println(number);
+        
+        switch (number) {
+          case '1':
+          {
+            digitalWrite(motorPinA1, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(2000);
+
+            Serial.println("A1");
+
+            //Stop motor spin
+            digitalWrite(motorPinA1, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+          case '3':
+          {
+            digitalWrite(motorPinA3, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(2000);
+
+            Serial.println("A3");
+
+            //Stop motor spin
+            digitalWrite(motorPinA3, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+           case '5':
+          {
+            digitalWrite(motorPinA5, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(2000);
+
+            Serial.println("A5");
+
+            //Stop motor spin
+            digitalWrite(motorPinA5, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial(); 
+          }break;
+
+           case '7':
+          {
+            digitalWrite(motorPinA7, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(2000);
+
+            Serial.println("A7");
+
+            //Stop motor spin
+            digitalWrite(motorPinA7, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          } break;
+          
+          default:
+          Serial.println("no matching column");
+            for (int i=0; i<10; i++){
+              digitalWrite (LedPin, HIGH);
+              delay(1000);
+              digitalWrite (LedPin, LOW);
+              delay(1000);
+            }
+          break;
+        }
+      }break;
+      
+     default:
+        Serial.println("no matching row");
+        for (int i=0; i<10; i++){
+              digitalWrite (LedPin, HIGH);
+              delay(1000);
+              digitalWrite (LedPin, LOW);
+              delay(1000);
+            }
+     break;
+    }
+    
+    
+    /*
     if (letter == 'A' && number== '1'){
     //Serial.println("location");
     digitalWrite(motorPinA1, HIGH);
@@ -140,8 +237,9 @@ void motor(int row, int column){
     digitalWrite (LedPin, LOW);
     delay(1000);
     flushMySerial();
-  }
+  }*/
 }
+
 
 void flushMySerial(){
   while(Serial.available())
