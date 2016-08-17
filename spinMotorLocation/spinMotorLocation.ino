@@ -1,23 +1,30 @@
+//Define the mapping of each of the motors and digital pins
+
+//Row A
 int motorPinA1 = 2;
 int motorPinA3 = 3;
 int motorPinA5 = 4;
 int motorPinA7 = 5;
 
+//Row B
 int motorPinB1 = 6;
 int motorPinB3 = 7;
 int motorPinB5 = 8;
 int motorPinB7 = 9;
 
+//Row C
 int motorPinC1 = 10;
 int motorPinC3 = 11;
 int motorPinC5 = 12;
 int motorPinC7 = 22;
 
+//Row D
 int motorPinD1 = 23;
 int motorPinD3 = 24;
 int motorPinD5 = 25;
 int motorPinD7 = 26;
 
+//Row E
 int motorPinE1 = 27;
 int motorPinE2 = 28;
 int motorPinE3 = 29;
@@ -27,25 +34,45 @@ int motorPinE6 = 32;
 int motorPinE7 = 33;
 int motorPinE8 = 34;
 
+//Row F
 int motorPinF1 = 35;
 int motorPinF3 = 36;
 int motorPinF5 = 37;
 int motorPinF7 = 38;
 
+//Row G
 int motorPinG1 = 39;
 int motorPinG2 = 40;
 int motorPinG3 = 41;
 int motorPinG4 = 42;
 
+//Define debug LED pin
 int LedPin = 13;
-char spot[4];
-int Letter, Number;
+char spot[4]; //array for serial write buffer
+
+int Letter, Number; 
 
 void setup() {
   Serial.begin(9600);
-   pinMode(motorPin, OUTPUT);
-   pinMode(LedPin, OUTPUT);
-Serial.println("Live and working");
+
+//Set digital pins as output for low end pins 2-12
+int pinNumLow = 12;
+
+ for(int i=2; i<=pinNumLow; i++)
+{
+  pinMode(i, OUTPUT);
+}
+  
+//Set digital pins as output for high end pins 22-42  
+int pinNumHigh = 42;
+ 
+ for(int i=22; i<=pinNumHigh; i++)
+{
+  pinMode(i, OUTPUT);
+}
+   pinMode(LedPin, OUTPUT); //LED pin as output
+   
+  Serial.println("Live and working"); //debug Arduino booted
 }
 
 void loop() {
