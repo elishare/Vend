@@ -50,6 +50,8 @@ int motorPinG4 = 42;
 int LedPin = 13;
 char spot[4]; //array for serial write buffer
 
+int motorOntime = 2000; //time the motor is on when selection is made 2 secs
+
 int Letter, Number; 
 
 void setup() {
@@ -131,7 +133,7 @@ void motor(int row, int column){
           {
             digitalWrite(motorPinA1, HIGH);
             digitalWrite (LedPin, HIGH);
-            delay(2000);
+            delay(motorOntime);
 
             Serial.println("A1");
 
@@ -147,7 +149,7 @@ void motor(int row, int column){
           {
             digitalWrite(motorPinA3, HIGH);
             digitalWrite (LedPin, HIGH);
-            delay(2000);
+            delay(motorOntime);
 
             Serial.println("A3");
 
@@ -163,7 +165,7 @@ void motor(int row, int column){
           {
             digitalWrite(motorPinA5, HIGH);
             digitalWrite (LedPin, HIGH);
-            delay(2000);
+            delay(motorOntime);
 
             Serial.println("A5");
 
@@ -179,9 +181,501 @@ void motor(int row, int column){
           {
             digitalWrite(motorPinA7, HIGH);
             digitalWrite (LedPin, HIGH);
-            delay(2000);
+            delay(motorOntime);
 
             Serial.println("A7");
+
+            //Stop motor spin
+            digitalWrite(motorPinA7, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          } break;
+          
+          default:
+          Serial.println("no matching column");
+            for (int i=0; i<10; i++){
+              digitalWrite (LedPin, HIGH);
+              delay(1000);
+              digitalWrite (LedPin, LOW);
+              delay(1000);
+            }
+          break;
+        }
+      }break;
+      
+      case 'B':
+      {
+        Serial.println("In the B case");
+        //Serial.println(number);
+        
+        switch (number) {
+          case '1':
+          {
+            digitalWrite(motorPinA1, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("B1");
+
+            //Stop motor spin
+            digitalWrite(motorPinA1, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+          case '3':
+          {
+            digitalWrite(motorPinA3, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("B3");
+
+            //Stop motor spin
+            digitalWrite(motorPinA3, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+           case '5':
+          {
+            digitalWrite(motorPinA5, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("B5");
+
+            //Stop motor spin
+            digitalWrite(motorPinA5, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial(); 
+          }break;
+
+           case '7':
+          {
+            digitalWrite(motorPinA7, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("B7");
+
+            //Stop motor spin
+            digitalWrite(motorPinA7, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          } break;
+          
+          default:
+          Serial.println("no matching column");
+            for (int i=0; i<10; i++){
+              digitalWrite (LedPin, HIGH);
+              delay(1000);
+              digitalWrite (LedPin, LOW);
+              delay(1000);
+            }
+          break;
+        }
+      }break;
+
+case 'C':
+      {
+        Serial.println("In the C case");
+        //Serial.println(number);
+        
+        switch (number) {
+          case '1':
+          {
+            digitalWrite(motorPinA1, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("C1");
+
+            //Stop motor spin
+            digitalWrite(motorPinA1, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+          case '3':
+          {
+            digitalWrite(motorPinA3, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("C3");
+
+            //Stop motor spin
+            digitalWrite(motorPinA3, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+           case '5':
+          {
+            digitalWrite(motorPinA5, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("C5");
+
+            //Stop motor spin
+            digitalWrite(motorPinA5, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial(); 
+          }break;
+
+           case '7':
+          {
+            digitalWrite(motorPinA7, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("C7");
+
+            //Stop motor spin
+            digitalWrite(motorPinA7, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          } break;
+          
+          default:
+          Serial.println("no matching column");
+            for (int i=0; i<10; i++){
+              digitalWrite (LedPin, HIGH);
+              delay(1000);
+              digitalWrite (LedPin, LOW);
+              delay(1000);
+            }
+          break;
+        }
+      }break;
+
+case 'D':
+      {
+        Serial.println("In the D case");
+        //Serial.println(number);
+        
+        switch (number) {
+          case '1':
+          {
+            digitalWrite(motorPinA1, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("D1");
+
+            //Stop motor spin
+            digitalWrite(motorPinA1, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+          case '3':
+          {
+            digitalWrite(motorPinA3, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("D3");
+
+            //Stop motor spin
+            digitalWrite(motorPinA3, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+           case '5':
+          {
+            digitalWrite(motorPinA5, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("D5");
+
+            //Stop motor spin
+            digitalWrite(motorPinA5, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial(); 
+          }break;
+
+           case '7':
+          {
+            digitalWrite(motorPinA7, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("D7");
+
+            //Stop motor spin
+            digitalWrite(motorPinA7, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          } break;
+          
+          default:
+          Serial.println("no matching column");
+            for (int i=0; i<10; i++){
+              digitalWrite (LedPin, HIGH);
+              delay(1000);
+              digitalWrite (LedPin, LOW);
+              delay(1000);
+            }
+          break;
+        }
+      }break;
+
+case 'A':
+      {
+        Serial.println("In the A case");
+        //Serial.println(number);
+        
+        switch (number) {
+          case '1':
+          {
+            digitalWrite(motorPinA1, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("A1");
+
+            //Stop motor spin
+            digitalWrite(motorPinA1, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+          case '3':
+          {
+            digitalWrite(motorPinA3, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("A3");
+
+            //Stop motor spin
+            digitalWrite(motorPinA3, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+           case '5':
+          {
+            digitalWrite(motorPinA5, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("A5");
+
+            //Stop motor spin
+            digitalWrite(motorPinA5, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial(); 
+          }break;
+
+           case '7':
+          {
+            digitalWrite(motorPinA7, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("A7");
+
+            //Stop motor spin
+            digitalWrite(motorPinA7, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          } break;
+          
+          default:
+          Serial.println("no matching column");
+            for (int i=0; i<10; i++){
+              digitalWrite (LedPin, HIGH);
+              delay(1000);
+              digitalWrite (LedPin, LOW);
+              delay(1000);
+            }
+          break;
+        }
+      }break;
+
+case 'F':
+      {
+        Serial.println("In the F case");
+        //Serial.println(number);
+        
+        switch (number) {
+          case '1':
+          {
+            digitalWrite(motorPinA1, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("F1");
+
+            //Stop motor spin
+            digitalWrite(motorPinA1, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+          case '3':
+          {
+            digitalWrite(motorPinA3, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("F3");
+
+            //Stop motor spin
+            digitalWrite(motorPinA3, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+           case '5':
+          {
+            digitalWrite(motorPinA5, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("F5");
+
+            //Stop motor spin
+            digitalWrite(motorPinA5, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial(); 
+          }break;
+
+           case '7':
+          {
+            digitalWrite(motorPinA7, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("F7");
+
+            //Stop motor spin
+            digitalWrite(motorPinA7, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          } break;
+          
+          default:
+          Serial.println("no matching column");
+            for (int i=0; i<10; i++){
+              digitalWrite (LedPin, HIGH);
+              delay(1000);
+              digitalWrite (LedPin, LOW);
+              delay(1000);
+            }
+          break;
+        }
+      }break;
+
+case 'G':
+      {
+        Serial.println("In the G case");
+        //Serial.println(number);
+        
+        switch (number) {
+          case '1':
+          {
+            digitalWrite(motorPinA1, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("G1");
+
+            //Stop motor spin
+            digitalWrite(motorPinA1, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+          case '2':
+          {
+            digitalWrite(motorPinA3, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("G2");
+
+            //Stop motor spin
+            digitalWrite(motorPinA3, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+           case '3':
+          {
+            digitalWrite(motorPinA5, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("G3");
+
+            //Stop motor spin
+            digitalWrite(motorPinA5, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial(); 
+          }break;
+
+           case '4':
+          {
+            digitalWrite(motorPinA7, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("G4");
 
             //Stop motor spin
             digitalWrite(motorPinA7, LOW);
@@ -220,7 +714,7 @@ void motor(int row, int column){
     //Serial.println("location");
     digitalWrite(motorPinA1, HIGH);
     digitalWrite (LedPin, HIGH);
-    delay(2000); //spin motor for 2 seconds
+    delay(motorOntime); //spin motor for 2 seconds
 
     //Stop motor spin
     digitalWrite(motorPinA1, LOW);
