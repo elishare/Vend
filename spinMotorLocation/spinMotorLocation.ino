@@ -213,14 +213,14 @@ void motor(int row, int column){
         switch (number) {
           case '1':
           {
-            digitalWrite(motorPinA1, HIGH);
+            digitalWrite(motorPinB1, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("B1");
 
             //Stop motor spin
-            digitalWrite(motorPinA1, LOW);
+            digitalWrite(motorPinB1, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -229,14 +229,14 @@ void motor(int row, int column){
           
           case '3':
           {
-            digitalWrite(motorPinA3, HIGH);
+            digitalWrite(motorPinB3, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("B3");
 
             //Stop motor spin
-            digitalWrite(motorPinA3, LOW);
+            digitalWrite(motorPinB3, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -245,14 +245,14 @@ void motor(int row, int column){
           
            case '5':
           {
-            digitalWrite(motorPinA5, HIGH);
+            digitalWrite(motorPinB5, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("B5");
 
             //Stop motor spin
-            digitalWrite(motorPinA5, LOW);
+            digitalWrite(motorPinB5, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -261,14 +261,14 @@ void motor(int row, int column){
 
            case '7':
           {
-            digitalWrite(motorPinA7, HIGH);
+            digitalWrite(motorPinB7, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("B7");
 
             //Stop motor spin
-            digitalWrite(motorPinA7, LOW);
+            digitalWrite(motorPinB7, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -295,14 +295,14 @@ case 'C':
         switch (number) {
           case '1':
           {
-            digitalWrite(motorPinA1, HIGH);
+            digitalWrite(motorPinC1, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("C1");
 
             //Stop motor spin
-            digitalWrite(motorPinA1, LOW);
+            digitalWrite(motorPinC1, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -311,14 +311,14 @@ case 'C':
           
           case '3':
           {
-            digitalWrite(motorPinA3, HIGH);
+            digitalWrite(motorPinC3, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("C3");
 
             //Stop motor spin
-            digitalWrite(motorPinA3, LOW);
+            digitalWrite(motorPinC3, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -327,14 +327,14 @@ case 'C':
           
            case '5':
           {
-            digitalWrite(motorPinA5, HIGH);
+            digitalWrite(motorPinC5, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("C5");
 
             //Stop motor spin
-            digitalWrite(motorPinA5, LOW);
+            digitalWrite(motorPinC5, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -343,14 +343,14 @@ case 'C':
 
            case '7':
           {
-            digitalWrite(motorPinA7, HIGH);
+            digitalWrite(motorPinC7, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("C7");
 
             //Stop motor spin
-            digitalWrite(motorPinA7, LOW);
+            digitalWrite(motorPinC7, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -377,14 +377,14 @@ case 'D':
         switch (number) {
           case '1':
           {
-            digitalWrite(motorPinA1, HIGH);
+            digitalWrite(motorPinD1, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("D1");
 
             //Stop motor spin
-            digitalWrite(motorPinA1, LOW);
+            digitalWrite(motorPinD1, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -393,14 +393,14 @@ case 'D':
           
           case '3':
           {
-            digitalWrite(motorPinA3, HIGH);
+            digitalWrite(motorPinD3, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("D3");
 
             //Stop motor spin
-            digitalWrite(motorPinA3, LOW);
+            digitalWrite(motorPinD3, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -409,14 +409,14 @@ case 'D':
           
            case '5':
           {
-            digitalWrite(motorPinA5, HIGH);
+            digitalWrite(motorPinD5, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("D5");
 
             //Stop motor spin
-            digitalWrite(motorPinA5, LOW);
+            digitalWrite(motorPinD5, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -425,14 +425,14 @@ case 'D':
 
            case '7':
           {
-            digitalWrite(motorPinA7, HIGH);
+            digitalWrite(motorPinD7, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("D7");
 
             //Stop motor spin
-            digitalWrite(motorPinA7, LOW);
+            digitalWrite(motorPinD7, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -451,70 +451,133 @@ case 'D':
         }
       }break;
 
-case 'A':
+case 'E':
       {
-        Serial.println("In the A case");
+        Serial.println("In the E case");
         //Serial.println(number);
         
         switch (number) {
-          case '1':
+        case '1':
           {
-            digitalWrite(motorPinA1, HIGH);
+            digitalWrite(motorPinE1, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
-            Serial.println("A1");
+            Serial.println("E1");
 
             //Stop motor spin
-            digitalWrite(motorPinA1, LOW);
+            digitalWrite(motorPinE1, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+        case '2':
+          {
+            digitalWrite(motorPinE2, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("E2");
+
+            //Stop motor spin
+            digitalWrite(motorPinE2, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
           flushMySerial();
           }break;
           
-          case '3':
+        case '3':
           {
-            digitalWrite(motorPinA3, HIGH);
+            digitalWrite(motorPinE3, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
-            Serial.println("A3");
+            Serial.println("E3");
 
             //Stop motor spin
-            digitalWrite(motorPinA3, LOW);
+            digitalWrite(motorPinE3, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
           flushMySerial();
           }break;
           
-           case '5':
+        case '4':
           {
-            digitalWrite(motorPinA5, HIGH);
+            digitalWrite(motorPinE4, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
-            Serial.println("A5");
+            Serial.println("E4");
 
             //Stop motor spin
-            digitalWrite(motorPinA5, LOW);
+            digitalWrite(motorPinE4, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+          case '5':
+          {
+            digitalWrite(motorPinE5, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("E5");
+
+            //Stop motor spin
+            digitalWrite(motorPinE5, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+          case '6':
+          {
+            digitalWrite(motorPinE6, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("E6");
+
+            //Stop motor spin
+            digitalWrite(motorPinE6, LOW);
+            digitalWrite (LedPin, LOW);
+            delay(100); //
+    
+          flushMySerial();
+          }break;
+          
+           case '7':
+          {
+            digitalWrite(motorPinE7, HIGH);
+            digitalWrite (LedPin, HIGH);
+            delay(motorOntime);
+
+            Serial.println("E7");
+
+            //Stop motor spin
+            digitalWrite(motorPinE7, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
           flushMySerial(); 
           }break;
 
-           case '7':
+           case '8':
           {
-            digitalWrite(motorPinA7, HIGH);
+            digitalWrite(motorPinE8, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
-            Serial.println("A7");
+            Serial.println("E8");
 
             //Stop motor spin
-            digitalWrite(motorPinA7, LOW);
+            digitalWrite(motorPinE8, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -541,14 +604,14 @@ case 'F':
         switch (number) {
           case '1':
           {
-            digitalWrite(motorPinA1, HIGH);
+            digitalWrite(motorPinF1, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("F1");
 
             //Stop motor spin
-            digitalWrite(motorPinA1, LOW);
+            digitalWrite(motorPinF1, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -557,14 +620,14 @@ case 'F':
           
           case '3':
           {
-            digitalWrite(motorPinA3, HIGH);
+            digitalWrite(motorPinF3, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("F3");
 
             //Stop motor spin
-            digitalWrite(motorPinA3, LOW);
+            digitalWrite(motorPinF3, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -573,14 +636,14 @@ case 'F':
           
            case '5':
           {
-            digitalWrite(motorPinA5, HIGH);
+            digitalWrite(motorPinF5, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("F5");
 
             //Stop motor spin
-            digitalWrite(motorPinA5, LOW);
+            digitalWrite(motorPinF5, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -589,14 +652,14 @@ case 'F':
 
            case '7':
           {
-            digitalWrite(motorPinA7, HIGH);
+            digitalWrite(motorPinF7, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("F7");
 
             //Stop motor spin
-            digitalWrite(motorPinA7, LOW);
+            digitalWrite(motorPinF7, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -623,14 +686,14 @@ case 'G':
         switch (number) {
           case '1':
           {
-            digitalWrite(motorPinA1, HIGH);
+            digitalWrite(motorPinG1, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("G1");
 
             //Stop motor spin
-            digitalWrite(motorPinA1, LOW);
+            digitalWrite(motorPinG1, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -639,14 +702,14 @@ case 'G':
           
           case '2':
           {
-            digitalWrite(motorPinA3, HIGH);
+            digitalWrite(motorPinG2, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("G2");
 
             //Stop motor spin
-            digitalWrite(motorPinA3, LOW);
+            digitalWrite(motorPinG2, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -655,14 +718,14 @@ case 'G':
           
            case '3':
           {
-            digitalWrite(motorPinA5, HIGH);
+            digitalWrite(motorPinG3, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("G3");
 
             //Stop motor spin
-            digitalWrite(motorPinA5, LOW);
+            digitalWrite(motorPinG3, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
@@ -671,14 +734,14 @@ case 'G':
 
            case '4':
           {
-            digitalWrite(motorPinA7, HIGH);
+            digitalWrite(motorPinG4, HIGH);
             digitalWrite (LedPin, HIGH);
             delay(motorOntime);
 
             Serial.println("G4");
 
             //Stop motor spin
-            digitalWrite(motorPinA7, LOW);
+            digitalWrite(motorPinG4, LOW);
             digitalWrite (LedPin, LOW);
             delay(100); //
     
