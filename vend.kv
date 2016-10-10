@@ -15,6 +15,7 @@
         Image:
             source: 'bat1.png'
             on_touch_down: if self.collide_point(*args[1].pos): root.Num='A1'
+            on_touch_up: root.APIcall(root.Num)
         Image:
             source: 'bat2.png'
             on_touch_down: if self.collide_point(*args[1].pos): root.Num='A3'
