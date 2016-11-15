@@ -47,7 +47,7 @@ int motorPinG3 = 41;
 int motorPinG4 = 42;
 
 //Power Mosfet Control Pins
-int rowApower = 44;
+int rowApower = 51;
 int rowBpower = 45;
 int rowCpower = 46;
 int rowDpower = 47;
@@ -59,7 +59,7 @@ int rowGpower = 50;
 int LedPin = 13;
 char spot[4]; //array for serial write buffer
 
-int motorOntime = 2000; //time the motor is on when selection is made 2 secs
+int motorOntime = 10000; //time the motor is on when selection is made 2 secs
 
 int Letter, Number; 
 
@@ -75,20 +75,20 @@ int pinNumLow = 12;
 }
   
 //Set digital pins as output for high end pins 22-50
-int pinNumHigh = 50;
+int pinNumHigh = 51;
  
  for(int i=22; i<=pinNumHigh; i++)
 {
   pinMode(i, OUTPUT);
 }
    pinMode(LedPin, OUTPUT); //LED pin as output
-   digitalWrite(rowApower, HIGH); // set the motor power to off for RowA
-   digitalWrite(rowBpower, HIGH); // set the motor power to off for RowB
-   digitalWrite(rowCpower, HIGH); // set the motor power to off for RowC
-   digitalWrite(rowDpower, HIGH); // set the motor power to off for RowD
-   digitalWrite(rowEpower, HIGH); // set the motor power to off for RowE
-   digitalWrite(rowFpower, HIGH); // set the motor power to off for RowF
-   digitalWrite(rowGpower, HIGH); // set the motor power to off for RowG
+   digitalWrite(rowApower, LOW); // set the motor power to off for RowA
+   digitalWrite(rowBpower, LOW); // set the motor power to off for RowB
+   digitalWrite(rowCpower, LOW); // set the motor power to off for RowC
+   digitalWrite(rowDpower, LOW); // set the motor power to off for RowD
+   digitalWrite(rowEpower, LOW); // set the motor power to off for RowE
+   digitalWrite(rowFpower, LOW); // set the motor power to off for RowF
+   digitalWrite(rowGpower, LOW); // set the motor power to off for RowG
    
   Serial.println("Live and working"); //debug Arduino booted
 }
@@ -144,7 +144,7 @@ void motor(int row, int column){
         Serial.println("In the A case");
         //Serial.println(number);
        
-        digitalWrite(rowApower, LOW); // set the motor power to on for RowA
+        digitalWrite(rowApower, HIGH); // set the motor power to on for RowA
        
         switch (number) {
           case '1':
@@ -221,6 +221,7 @@ void motor(int row, int column){
             }
           break;
         }
+        digitalWrite(rowApower, LOW); // set the motor power to off for RowA
       }break;
       
       case 'B':
@@ -228,7 +229,7 @@ void motor(int row, int column){
         Serial.println("In the B case");
         //Serial.println(number);
 
-        digitalWrite(rowBpower, LOW); // set the motor power to on for RowB
+        digitalWrite(rowBpower, HIGH); // set the motor power to on for RowB
         
         switch (number) {
           case '1':
@@ -305,6 +306,7 @@ void motor(int row, int column){
             }
           break;
         }
+        digitalWrite(rowBpower, LOW); // set the motor power to off for RowB
       }break;
 
 case 'C':
@@ -312,7 +314,7 @@ case 'C':
         Serial.println("In the C case");
         //Serial.println(number);
         
-        digitalWrite(rowCpower, LOW); // set the motor power to on for RowC
+        digitalWrite(rowCpower, HIGH); // set the motor power to on for RowC
         
         switch (number) {
           case '1':
@@ -389,6 +391,7 @@ case 'C':
             }
           break;
         }
+        digitalWrite(rowCpower, LOW); // set the motor power to off for RowC
       }break;
 
 case 'D':
@@ -396,7 +399,7 @@ case 'D':
         Serial.println("In the D case");
         //Serial.println(number);
 
-        digitalWrite(rowDpower, LOW); // set the motor power to on for RowD
+        digitalWrite(rowDpower, HIGH); // set the motor power to on for RowD
         
         switch (number) {
           case '1':
@@ -473,6 +476,7 @@ case 'D':
             }
           break;
         }
+        digitalWrite(rowDpower, LOW); // set the motor power to off for RowD
       }break;
 
 case 'E':
@@ -480,7 +484,7 @@ case 'E':
         Serial.println("In the E case");
         //Serial.println(number);
         
-        digitalWrite(rowEpower, LOW); // set the motor power to on for RowE
+        digitalWrite(rowEpower, HIGH); // set the motor power to on for RowE
         
         switch (number) {
         case '1':
@@ -620,6 +624,7 @@ case 'E':
             }
           break;
         }
+        digitalWrite(rowEpower, LOW); // set the motor power to off for RowE
       }break;
 
 case 'F':
@@ -627,7 +632,7 @@ case 'F':
         Serial.println("In the F case");
         //Serial.println(number);
         
-        digitalWrite(rowFpower, LOW); // set the motor power to on for RowF
+        digitalWrite(rowFpower, HIGH); // set the motor power to on for RowF
 
         switch (number) {
           case '1':
@@ -704,6 +709,7 @@ case 'F':
             }
           break;
         }
+        digitalWrite(rowFpower, LOW); // set the motor power to off for RowG
       }break;
 
 case 'G':
@@ -711,7 +717,7 @@ case 'G':
         Serial.println("In the G case");
         //Serial.println(number);
 
-        digitalWrite(rowGpower, LOW); // set the motor power to on for RowG
+        digitalWrite(rowGpower, HIGH); // set the motor power to on for RowG
         
         switch (number) {
           case '1':
@@ -788,6 +794,7 @@ case 'G':
             }
           break;
         }
+        digitalWrite(rowGpower, LOW); // set the motor power to off for RowF
       }break;
       
      default:
@@ -799,13 +806,13 @@ case 'G':
               delay(1000);
             }
      break;
-     digitalWrite(rowApower, HIGH); // set the motor power to off for RowA
-     digitalWrite(rowBpower, HIGH); // set the motor power to off for RowB
-     digitalWrite(rowCpower, HIGH); // set the motor power to off for RowC
-     digitalWrite(rowDpower, HIGH); // set the motor power to off for RowD
-     digitalWrite(rowEpower, HIGH); // set the motor power to off for RowE
-     digitalWrite(rowFpower, HIGH); // set the motor power to off for RowF
-     digitalWrite(rowGpower, HIGH); // set the motor power to off for RowG
+     digitalWrite(rowApower, LOW); // set the motor power to off for RowA
+     digitalWrite(rowBpower, LOW); // set the motor power to off for RowB
+     digitalWrite(rowCpower, LOW); // set the motor power to off for RowC
+     digitalWrite(rowDpower, LOW); // set the motor power to off for RowD
+     digitalWrite(rowEpower, LOW); // set the motor power to off for RowE
+     digitalWrite(rowFpower, LOW); // set the motor power to off for RowF
+     digitalWrite(rowGpower, LOW); // set the motor power to off for RowG
     }
     
     
